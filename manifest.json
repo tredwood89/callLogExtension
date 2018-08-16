@@ -3,11 +3,20 @@
   "name": "NGP CallLogs",
   "version": "1.0",
   "description": "create call logs from google sheets notes",
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
   "icons": {
     "128": "callLogIcon.png"
   },
   "browser_action": {
     "default_icon": "callLogIcon.png",
     "default_popup": "popup.html"
-  }
+  },
+  "permissions": [
+    "identity",
+    "activeTab",
+    "storage"
+  ]
 }
