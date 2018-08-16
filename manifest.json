@@ -4,8 +4,8 @@
   "version": "1.0",
   "description": "create call logs from google sheets notes",
   "background": {
-      "scripts": ["background.js"],
-      "persistent": true
+      "scripts": ["eventPage.js"],
+      "persistent": false
     },
   "icons": {
     "128": "callLogIcon.png"
