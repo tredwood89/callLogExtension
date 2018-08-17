@@ -4,7 +4,9 @@
   "version": "1.0",
   "description": "create call logs from google sheets notes",
   "background": {
-      "scripts": ["eventPage.js"],
+      "scripts": [
+        "background.js",
+        "backgroundOauth.js"],
       "persistent": false
     },
   "icons": {

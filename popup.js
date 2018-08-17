@@ -14,7 +14,7 @@ $(function(){
   $('#getSheetValue').click(function(){
     chrome.storage.sync.set({'sheetsId':sheetsId});
     chrome.storage.sync.set({'sheetsRange':sheetsRange});
-
+    alert("clicked ")
   })
 
 })

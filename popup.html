@@ -4,11 +4,15 @@
 
     <head>
         <title>Call Log Creater</title>
-        <script src="jquery-3.3.1.min.js">
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="popup.js"></script>
+        <script src="backgroundOauth.js"></script>
+        <script async defer src="https://apis.google.com/js/api.js"
+          onload="this.onload=function(){};handleClientLoad()"
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
         </script>
 
-        <script src="popup.js">
-        </script>
+
 
         <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     </head>
@@ -21,6 +25,13 @@
         <br />
         <br />
         <input id="getSheetValue" type="submit" />
+        <br />
+        <br />
+
+
+        <button type="button" id="signin-button" onclick="handleSignInClick()">Sign in</button>
+        <button type="button" id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+      </body>
 
     </body>
 
