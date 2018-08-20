@@ -5,17 +5,28 @@
   "description": "create call logs from google sheets notes",
   "background": {
       "scripts": [
-        "background.js",
-        "backgroundOauth.js"],
+        "eventPage.js"
+      ],
       "persistent": false
     },
   "icons": {
     "128": "callLogIcon.png"
   },
   "browser_action": {
+    "default_title":"Call Log Helper",
     "default_icon": "callLogIcon.png",
     "default_popup": "popup.html"
+
   },
+  "key": "",
+  "oauth2":{
+    "client_id":"",
+    "scopes":[
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/spreadsheets.readonly"
+    ]
+  },
+
   "permissions": [
     "identity",
     "activeTab",
