@@ -3,24 +3,35 @@
   "name": "NGP CallLogs",
   "version": "1.0",
   "description": "create call logs from google sheets notes",
+
   "background": {
       "scripts": [
-        "eventPage.js"
+        "background.js"
       ],
       "persistent": false
     },
+
+  "content_scripts":[
+    {
+      "matches":["https://www2.myngp.com/*"],
+      "js":["content.js","jquery-3.3.1.min.js"]
+    }
+  ],
+
   "icons": {
     "128": "callLogIcon.png"
   },
+
   "browser_action": {
     "default_title":"Call Log Helper",
     "default_icon": "callLogIcon.png",
     "default_popup": "popup.html"
 
   },
-  "key": "",
+
+  "key": ,
   "oauth2":{
-    "client_id":"",
+    "client_id":,
     "scopes":[
       "https://www.googleapis.com/auth/spreadsheets",
       "https://www.googleapis.com/auth/spreadsheets.readonly"
@@ -30,6 +41,7 @@
   "permissions": [
     "identity",
     "activeTab",
-    "storage"
+    "storage",
+    "https://www2.myngp.com/*"
   ]
 }

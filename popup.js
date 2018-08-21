@@ -18,6 +18,7 @@ $(function(){
 
     chrome.storage.sync.get(['token'], function(auth){
       console.log(auth.token);
+      console.log(sheetsId, sheetsRange);
       let init = {
         method: 'GET',
         async: true,
