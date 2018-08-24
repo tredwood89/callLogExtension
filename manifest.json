@@ -29,9 +29,9 @@
 
   },
 
-  "key": ,
+  "key": "my_key",
   "oauth2":{
-    "client_id":,
+    "client_id":"my_client_id",
     "scopes":[
       "https://www.googleapis.com/auth/spreadsheets",
       "https://www.googleapis.com/auth/spreadsheets.readonly"

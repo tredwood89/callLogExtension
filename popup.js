@@ -37,5 +37,24 @@ $(function(){
             chrome.storage.sync.set({'sheetsValue': data.values})
           });
     })
+
+    
+    chrome.storage.sync.get(['currentRow'], function(row){
+      console.log('hello from current row');
+      if (row.currentRow) {
+        console.log('curr is real');
+        $('#name').text(`name: ${row.currentRow[0]}`)
+        $('#note').text(`note:${row.currentRow[1]}`)
+      }
+
+    })
   })
+
+
+
+    $('#signout-button').click(function(){
+      $('#name').text("no data")
+      $('#note').text("no data")
+      chrome.storage.sync.clear()
+    })
 })
