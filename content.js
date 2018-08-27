@@ -1,5 +1,6 @@
 console.log("chrome ext go!!");
 
+
 chrome.storage.sync.get(['sheetsValue'], function(data){
 
   console.log(data.sheetsValue);
@@ -8,13 +9,18 @@ chrome.storage.sync.get(['sheetsValue'], function(data){
   let createLogButton = document.getElementsByClassName('stopPropagation')[9]
   let notesBox = document.getElementById('Notes')
   let createNoteButton = document.getElementsByClassName('primaryAction')[0]
-
-  if (sheetsData.length === 0) {
-    alert('no more rows')
-    return
-  }
-
+  let rownum = 1
   let currentRow = sheetsData.shift()
+
+
+  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
+    if(request.submitClicked === "clearSearch") {
+      chrome.storage.sync.set({'currentRow': currentRow})
+      searchBar.value = currentRow[0]
+    }
+
+  })
+
   chrome.storage.sync.set({'currentRow': currentRow})
   searchBar.value = currentRow[0]
   createLogButton.addEventListener("click",function(event){
@@ -24,7 +30,16 @@ chrome.storage.sync.get(['sheetsValue'], function(data){
   createNoteButton.addEventListener("click", function(event){
     searchBar.value = ""
     chrome.storage.sync.set({'sheetsValue': sheetsData})
+    chrome.runtime.sendMessage({createButtonClicked:"updateCurrentRow"})
+
   })
+
+  if (sheetsData.length === 0) {
+    searchBar.value = ""
+    alert('no more rows')
+    return
+  }
+
 
   // function insertNotes(dataArr){
   //

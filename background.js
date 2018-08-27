@@ -3,6 +3,7 @@
 // });
 
 chrome.browserAction.setPopup({popup:"popup.html"})
+
 // let init = {
 //   method: 'GET',
 //   async: true,

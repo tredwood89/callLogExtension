@@ -7,6 +7,7 @@
         <script src="jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="oauth.js"></script>
         <script src="popup.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
 
@@ -21,17 +22,25 @@
         <br />
         <br />
 
-          <div id="currentRowDiv">
-            <h3>Current Row</h3>
-            <li id='name'>n/a</li>
-            <li id='note'>n/a</li>
+          <div id="currentRowDiv" style="border:1px solid black;">
+            <h4 style="color:blue">Current Row Details</h4>
+            <p><b>Total Rows:</b><span id='entries'></span></p>
+
+            <li><b>Name</b></li>
+            <p id='name'>no data</p>
+            <li><b>Note</b></li>
+            <p id='note'>no data</p>
           </div>
           <br/>
-          
-        </br/>
 
-        <button type="button" id="signin-button">On</button>
-        <button type="button" id="signout-button">Off</button>
+        </br/>
+        <div id="onOff">
+          <button type="button" id="signin-button">On</button>
+          <button type="button" id="signout-button">Off</button>
+          <div id="switchBoxOff"></div>
+          <div id="switchBoxOn" hidden="true"></div>
+
+        </div>
       </body>
 
     </body>

@@ -14,7 +14,10 @@
   "content_scripts":[
     {
       "matches":["https://www2.myngp.com/*"],
-      "js":["content.js","jquery-3.3.1.min.js"]
+      "js":[
+        "content.js",
+        "jquery-3.3.1.min.js"
+      ]
     }
   ],
 
@@ -29,9 +32,9 @@
 
   },
 
-  "key": "my_key",
+  "key":"my_Key",
   "oauth2":{
-    "client_id":"my_client_id",
+    "client_id":"my_Id",
     "scopes":[
       "https://www.googleapis.com/auth/spreadsheets",
       "https://www.googleapis.com/auth/spreadsheets.readonly"
