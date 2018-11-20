@@ -5,9 +5,9 @@ Provide the extension with the google sheet data set, and it will auto polutate 
 
 Key things to remember:
 
--The little box must be green in order to fetch data successfully 
+- The little box must be green in order to fetch data successfully 
 
--After your call logs are complete. Click 'off' to clear the data from chomr storage.
+- After your call logs are complete. Click 'off' to clear the data from chomr storage.
 
 
 Refer to the videos below for more indepth usage
